@@ -98,21 +98,29 @@ flowchart LR
     F --> G[FastAPI / Triton]
 ```
 
-#### 🔹 [Customer Intelligence & Churn Forecasting Engine](https://github.com/rsshir60)
-*Modular ML pipeline predicting user attrition probability with full lifecycle governance.*
-- **Tech Stack:** Python 3.11, LightGBM, Optuna, MLflow, FastAPI, Docker, GitHub Actions.
-- **Key Results:** Built automated feature selection reducing dimensionality by 42%; boosted ROC-AUC from 0.73 baseline to 0.88 with Bayesian hyperparameter optimization.
-- **Serving:** Asynchronous REST API containerized with Docker, achieving sub-25ms inference latency.
+#### 🔹 [Customer Retention & Uplift Modeling Engine](https://github.com/rsshir60/uplift-retention-engine)
+*Causal ML pipeline identifying persuadable customers via CATE meta-learners to maximize incremental ROI.*
+- **Tech Stack:** Python 3.11, EconML (T/X/DR-Learner), XGBoost, SHAP, MLflow, FastAPI, Docker.
+- **Key Results:** Achieved Qini coefficient of 0.24; demonstrated +$80k net incremental profit (348% ROI) over blanket promotions in simulated A/B retention campaigns.
+- **Features:** Per-customer SHAP waterfall attributions returned in REST responses for CRM and marketing operations.
 
-#### 🔹 [Distributed Multi-Horizon Demand Forecasting](https://github.com/rsshir60)
-*Time-series modeling infrastructure handling multivariate seasonal demand across enterprise SKUs.*
-- **Tech Stack:** PyTorch, NeuralProphet, Polars, Statsmodels, MLflow, PostgreSQL.
-- **Key Results:** Implemented rolling-origin cross-validation with custom asymmetric loss functions; decreased MAPE by 19.4% over traditional SARIMAX baselines.
+#### 🔹 [Real-Time Transaction Anomaly & Drift Detection Pipeline](https://github.com/rsshir60/fraud-drift-pipeline)
+*Sub-50ms fraud scoring under extreme 200:1 class imbalance with automated distribution drift alerting.*
+- **Tech Stack:** LightGBM, Isolation Forest, Evidently AI, Redpanda / Kafka, FastAPI, Docker.
+- **Key Results:** Slashed business loss by 46% using asymmetric cost-sensitive threshold optimization ($90 missed fraud vs $25 false alarm); verified P99 inference latency < 5ms.
+- **Monitoring:** Integrated continuous Kolmogorov-Smirnov and Chi-Square tests generating automated visual drift reports.
 
-#### 🔹 [Enterprise Semantic Search & Knowledge Retrieval (RAG)](https://github.com/rsshir60)
-*Production vector search and domain-specific Q&A pipeline over unstructured technical corpora.*
-- **Tech Stack:** PyTorch, Hugging Face Transformers, Qdrant Vector DB, FastAPI, LangChain.
-- **Key Results:** Built reciprocal rank fusion (RRF) combining dense vector embeddings with sparse BM25 indexing, increasing Top-5 retrieval precision by 31%.
+#### 🔹 [Domain-Specific RAG System with Automated Evaluation](https://github.com/rsshir60/domain-rag-eval)
+*Enterprise semantic search & Q&A pipeline over SEC Form 10-K filings with verifiable citations.*
+- **Tech Stack:** Qdrant Vector DB, rank_bm25, Cross-Encoder Reranker, SentenceTransformers, FastAPI.
+- **Key Results:** Reciprocal Rank Fusion (RRF) blending dense vectors with BM25 plus Cross-Encoder reranking achieved 100% Hit Rate@3 and slashed hallucination rate down to 4.0%.
+- **Benchmarking:** Automated RAGAS-style evaluation measuring MRR, Context Recall, Faithfulness, and cost ($0.0006/1k queries).
+
+#### 🔹 [Hierarchical Demand Forecasting & Inventory Optimization](https://github.com/rsshir60/demand-inventory-optimizer)
+*Retail supply chain engine pairing probabilistic multi-quantile forecasting with Linear Programming.*
+- **Tech Stack:** LightGBM Quantile Regression (P10/P50/P90), SciPy HiGHS Solver, Pandas, FastAPI.
+- **Key Results:** Translated prediction spread into dynamic lead-time safety stocks; solved constrained reorder LP to reduce stockout rates from 14.8% to 2.6% and cut operating costs by 76.8%.
+- **Simulation:** 30-day discrete-event simulation benchmark proving inventory capital savings under warehouse capacity constraints.
 
 ---
 
